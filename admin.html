@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+ 
+<body>
+ 
+<div class="dashboard">
+ 
+   
+    <aside class="sidebar">
+ 
+        <div class="logo">
+            <img src="logo.png" alt="System Logo">
+            <h2>Admin</h2>
+        </div>
+ 
+        <nav>
+ 
+            <a href="admin-dashboard.html" class="active">
+                Dashboard
+            </a>
+ 
+            <a href="users.html">
+                Users
+            </a>
+ 
+            <a href="assets.html">
+                Assets
+            </a>
+ 
+            <a href="transactions.html">
+                Transactions
+            </a>
+ 
+            <a href="history.html">
+                History
+            </a>
+ 
+            <a href="settings.html">
+                Settings
+            </a>
+ 
+        </nav>
+ 
+        <a href="login.html" class="logout">
+            Logout
+        </a>
+ 
+    </aside>
+ 
+ 
+   
+    <main class="main-content">
+ 
+       
+        <header class="topbar">
+ 
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back!</p>
+            </div>
+ 
+            <div class="admin-profile">
+ 
+                <img src="admin.png" alt="Admin">
+ 
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Admin</small>
+                </div>
+ 
+            </div>
+ 
+        </header>
+ 
+ 
+     
+        <section class="cards">
+ 
+         
+            <div class="card">
+ 
+                <div>
+                    <h3>Total Users</h3>
+                    <p>1</p>
+                </div>
+ 
+            </div>
+ 
+ 
+          
+            <div class="card">
+
+ 
+                <div>
+                    <h3>Total Product</h3>
+                    <p>2</p>
+                </div>
+ 
+            </div>
+ 
+ 
+          
+            <div class="card">
+ 
+                <div>
+                    <h3>Available Product</h3>
+                    <p>100</p>
+                </div>
+ 
+            </div>
+ 
+ 
+         
+            <div class="card">
+ 
+                <div>
+                    <h3>Total Buying</h3>
+                    <p>70</p>
+                </div>
+ 
+            </div>
+ 
+        </section>
+ 
+ 
+   
+        <section class="table-container">
+ 
+            <div class="section-header">
+ 
+                <div>
+                    <h2>Recent Transactions</h2>
+                    <p>Latest asset activities</p>
+                </div>
+ 
+                <button onclick="viewAll()">
+                    View All
+                </button>
+ 
+            </div>
+ 
+ 
+            <table>
+ 
+                <thead>
+ 
+                    <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Asset</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+ 
+                </thead>
+ 
+ 
+                <tbody>
+ 
+                    <tr>
+ 
+                        <td>#001</td>
+ 
+                        <td>
+                            <div class="user">
+                                <div class="user-icon">J</div>
+                                Juan Dela Cruz
+                            </div>
+                        </td>
+ 
+                        <td>Laptop</td>
+ 
+                        <td>Aug 19, 2026</td>
+ 
+                        <td>
+                            <span class="status borrowed">
+                                Borrowed
+                            </span>
+                        </td>
+ 
+                        <td>
+                            <button class="view-btn">
+                                View
+                            </button>
+                        </td>
+ 
+                    </tr>
+ 
+ 
+                    <tr>
+ 
+                        <td>#002</td>
+ 
+                        <td>
+                            <div class="user">
+                                <div class="user-icon">M</div>
+                                Maria Santos
+                            </div>
+                        </td>
+ 
+                        <td>Projector</td>
+ 
+                        <td>Aug 18, 2026</td>
+ 
+                        <td>
+                            <span class="status returned">
+                                Returned
+                            </span>
+                        </td>
+ 
+                        <td>
+                            <button class="view-btn">
+                                View
+                            </button>
+                        </td>
+ 
+                    </tr>
+ 
+ 
+                    <tr>
+ 
+                        <td>#003</td>
+ 
+                        <td>
+                            <div class="user">
+                                <div class="user-icon">P</div>
+                                Pedro Reyes
+                            </div>
+                        </td>
+ 
+                        <td>Keyboard</td>
+ 
+                        <td>Aug 17, 2026</td>
+ 
+                        <td>
+                            <span class="status borrowed">
+                                Borrowed
+                            </span>
+                        </td>
+ 
+                        <td>
+                            <button class="view-btn">
+                                View
+                            </button>
+                        </td>
+ 
+                    </tr>
+ 
+ 
+                    <tr>
+ 
+                        <td>#004</td>
+ 
+                        <td>
+                            <div class="user">
+                                <div class="user-icon">A</div>
+                                Ana Garcia
+                            </div>
+                        </td>
+ 
+                        <td>Monitor</td>
+ 
+                        <td>Aug 16, 2026</td>
+ 
+                        <td>
+                            <span class="status returned">
+                                Returned
+                            </span>
+                        </td>
+ 
+                        <td>
+                            <button class="view-btn">
+                                View
+                            </button>
+                        </td>
+ 
+                    </tr>
+ 
+                </tbody>
+ 
+            </table>
+ 
+        </section>
+ 
+    </main>
+ 
+</div>
+ 
+ 
+<script>
+ 
+function viewAll() {
+    window.location.href = "transactions.html";
+}
+ 
+</script>
+ 
+</body>
+</html>
