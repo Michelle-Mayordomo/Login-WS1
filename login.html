@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="/logo.png" alt="School Logo" class="logo">
+
+    <h2>Welcome Back</h2>
+    <p>Login</p>
+
+    <form action="/login" method="POST">
+
+        <input
+            type="email"
+            name="email"
+            placeholder="School Email"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
+        <a href="#" class="forgot">Forgot Password?</a>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <p>
+        Don't have an account?
+        <a href="/register">Create Account</a>
+    </p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8eaf1;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   DASHBOARD LAYOUT
+================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   SIDEBAR
+================================= */
+
+.sidebar {
+    width: 240px;
+    background: #ebcada;
+    color: white;
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    height: 100vh;
+}
+
+
+/* ==============================
+   LOGO
+================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 10px;
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+    border-radius: 50%;
+
+    background: white;
+    padding: 5px;
+}
+
+.logo h2 {
+    font-size: 21px;
+}
+
+
+/* ==============================
+   SIDEBAR NAVIGATION
+================================= */
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a,
+.logout,
+.logout-btn {
+    text-decoration: none;
+    color: white;
+
+    padding: 13px 15px;
+
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+    background: #b94c78;
+}
+
+
+/* ==============================
+   LOGOUT
+================================= */
+
+.logout,
+.logout-btn {
+    margin-top: auto;
+    background: #ff69b4;
+    text-align: center;
+}
+
+.logout:hover,
+.logout-btn:hover {
+    background: #ee4a9c;
+}
+
+
+/* ==============================
+   MAIN CONTENT
+================================= */
+
+.main-content {
+    margin-left: 240px;
+    padding: 30px;
+    width: calc(100% - 240px);
+}
+
+.main-content h1 {
+    color: #702442;
+    margin-bottom: 15px;
+}
+
+.main-content p {
+    color: #555;
+}
+
+
+/* ==============================
+   TOPBAR
+================================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    color: #702442;
+    font-size: 30px;
+}
+
+.topbar p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   ADMIN PROFILE
+================================= */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-profile img {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.admin-profile strong {
+    display: block;
+    color: #702442;
+}
+
+.admin-profile small {
+    display: block;
+    color: #888;
+    margin-top: 3px;
+}
+
+
+/* ==============================
+   DASHBOARD CARDS
+================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+
+    padding: 22px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card .icon {
+    width: 50px;
+    height: 50px;
+
+    background: #f8d8e5;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #777;
+
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+
+    color: #8e3157;
+}
+
+
+/* ==============================
+   TABLE
+================================= */
+
+.table-container {
+    background: white;
+
+    border-radius: 12px;
+    padding: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #702442;
+    margin-bottom: 5px;
+}
+
+.section-header p {
+    color: #888;
+    font-size: 14px;
+}
+
+.section-header button {
+    background: #8e3157;
+    color: white;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.section-header button:hover {
+    background: #702442;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    color: #702442;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+
+/* ==============================
+   USER TABLE / ICON
+================================= */
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+
+    background: #f8d8e5;
+    color: #8e3157;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   STATUS
+================================= */
+
+.status {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.borrowed {
+    background: #ffe0e8;
+    color: #a72c55;
+}
+
+.returned {
+    background: #e0f5e7;
+    color: #26733e;
+}
+
+
+/* ==============================
+   VIEW BUTTON
+================================= */
+
+.view-btn {
+    border: none;
+
+    background: #f8d8e5;
+    color: #8e3157;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.view-btn:hover {
+    background: #8e3157;
+    color: white;
+}
+
+
+/* ==============================
+   USER PROFILE DASHBOARD
+================================= */
+
+.profile {
+    width: 350px;
+
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    border: 4px solid #ff69b4;
+
+    object-fit: cover;
+
+    margin-bottom: 15px;
+}
+
+.profile h2 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* ==============================
+   USER PROFILE BUTTONS
+================================= */
+
+.profile button {
+    border: none;
+
+    padding: 12px 20px;
+
+    background: #ff69b4;
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.profile button:hover {
+    background: #ee4a9c;
+}
+
+
+/* ==============================
+   RESPONSIVE - TABLET
+================================= */
+
+@media (max-width: 1100px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==============================
+   RESPONSIVE - MOBILE
+================================= */
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        width: 70px;
+        padding: 15px 8px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo h2,
+    .sidebar nav a,
+    .logout,
+    .logout-btn {
+        font-size: 0;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .main-content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+
+        padding: 20px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .admin-profile span,
+    .admin-profile div {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 750px;
+    }
+
+    .profile {
+        width: 90%;
+        max-width: 350px;
+    }
+}
